@@ -1,0 +1,133 @@
+
+# coding: utf-8
+
+# In[3]:
+
+
+print('作业一')
+name= input('告诉我你的名字吧')
+bir = float(input('你是那天活过来的？3.21吗？'))
+
+if 3.21<=bir<=4019:
+    print(name,'看来你命中注定是白羊座啊！')
+elif 4.20<=bir<=5.20:
+    print(name,'居然是只金牛座的')
+elif 5.21<=bir<=6.21:
+    print(name,'居然是只双子座的')
+elif 6.22<=bir<=7.22:
+    print(name,'居然是只巨蟹的')
+elif 7.23<=bir<=8.22:
+    print(name,'居然是只狮子座的')
+elif 8.23<=bir<=9.22:
+    print(name,'居然是只处女座的')
+elif 9.23<=bir<=10.23:
+    print(name,'居然是只天秤座的')
+elif 10.24<=bir<=11.22:
+    print(name,'居然是只天蝎座的')
+elif 11.23<=bir<=12.21:
+    print(name,'居然是只射手座的')
+elif 12.22<=bir<=1.19:
+    print(name,'居然是只摩羯座的')
+elif 1.20<=bir<=2.18:
+    print(name,'居然是只水瓶座的')
+elif 2.19<=bir<=3.20:
+    print(name,'居然是只双鱼座的')
+
+
+# In[ ]:
+
+
+作业2
+
+
+# In[7]:
+
+
+a = int(input('输入你想计算的第一个非零整数'))
+b = int(input('请输入第二个整数'))
+c = int(input('你想算什么？和差乘除分别是1234'))
+
+if c==1:
+    print(a+b)
+elif c==2:
+    print(a-b)
+elif c==3:
+    print(a*b)
+else :
+    print(a/b)
+
+
+# In[ ]:
+
+
+作业三
+
+
+# In[8]:
+
+
+p = int(input('今天天气指数到多少了呀？'))
+
+if p>500:
+    print('天哪，太糟糕了，你搬家吧')
+elif 200<p<=500:
+    print('不是很乐观呢，还是少出去走吧，在家宅一天')
+else :
+    print('已经很好啦，毕竟在北京呢，可以的话去逛逛吧')
+
+print('要注意身体哦')
+
+
+# In[ ]:
+
+
+作业四
+
+
+# In[41]:
+
+
+a = input('请输入一个单词的单数形式')
+if a.endswith('s'or'sh'or'ch'):
+    a+='es'
+    p=a
+    print('这就是复数啦',p)
+elif a.endswith('e'):
+    a+='s'
+    p=a
+    print('是这个啦',p)
+elif a.endswith('y'):
+    p=a.replace('y','ies')
+    
+    print('这个要记住啊',p)
+elif a.endswith('s'):
+    print('还是她啦',a)
+else:
+    a+='s'
+    print('是这个吧，不确定就查字典去吧',a)
+
+
+# In[ ]:
+
+
+尝试
+
+
+# In[47]:
+
+
+print(' ')
+print(' '' ')
+
+
+# In[ ]:
+
+
+挑战
+
+
+# In[ ]:
+
+
+呀。。。。。。。。。
+
