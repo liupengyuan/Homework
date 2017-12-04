@@ -1,0 +1,79 @@
+
+# coding: utf-8
+
+# In[25]:
+
+
+#练习一：自己定义一个reverse(s)函数，功能返回字符串s的倒序字符串。
+s=['busted','teensy','humidity','freak','wiggle']
+s.reverse()
+print(s)
+
+
+# In[39]:
+
+
+#练习二：写函数，根据给定符号和行数，打印相应直角三角形，等腰三角形及其他形式的
+#三角形。
+line='红酥手'
+for i in range(1,len(line)*2+1):
+    if i==1:
+        print(line[0])
+    elif i%2==1:
+        print(line[:i//2]+line[i//2]+line[i//2-1::-1])
+    else:
+        print(line[:i//2]+line[i//2-1::-1])
+print('-'*30)
+for i in range(len(line)*2):
+    if i==1:
+        print(' '*(len(line)*2-1)+line[0])
+    elif i%2==1:
+        print(' '*(len(line)*2-i)+line[:i//2]+line[i//2]+line[i//2-1::-1])
+    else:
+        print(' '*(len(line)*2-i)+line[:i//2]+line[i//2-1::-1])
+print('-'*30)
+line_1='爱'
+for i in range(1,6):
+    if i==1:
+        print(' '+line_1+' '*3+line_1)
+    elif i==2:
+        print((line_1+' ')*4)
+    elif i==3:
+        print((' '+line_1)*3)
+    elif i==4:
+        print(' '*2+line_1+' '+line_1)
+    else:
+        print(' '*3+line_1)
+
+
+# In[42]:
+
+
+#练习五：写函数，根据给定符号，打印各种菱形。
+for i in range(1,4):
+    if i==1:
+        print('-')
+    elif i==2:
+        print('|'+' '+'|')
+    else:
+        print('-')
+print('-'*30)
+for i in range(1,4):
+    if i==1:
+        print('-'*10)
+    elif i==2:
+        print('|'+' '*10+'|')
+    else:
+        print('-'*10)
+print('-'*30)
+for i in range(1,5):
+    if i==1:
+        print(' '*2+'-'*10)
+    elif i==2:
+        print(' '+'/'+' '*10+'/')
+    elif i==3:
+        print('/'+' '*10+'/')
+    else:
+        print('-'*10)
+        
+
