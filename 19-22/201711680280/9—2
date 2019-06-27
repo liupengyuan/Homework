@@ -1,0 +1,148 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "#随机生成1万个整数，范围在0-10万之间，求其中每个整数出现的次数。并按照整数大小排序输出整数及出现次数。\n",
+    "numbers=[]\n",
+    "i=0\n",
+    "while i<=10000:\n",
+    "    for number in range(0,100001):\n",
+    "        i+=1\n",
+    "    \n",
+    "def count_numbers_freq(numbers):\n",
+    "    number_freq_pairs = []\n",
+    "    with open(numbers) as f:\n",
+    "        text = f.read()\n",
+    "    for number in numbers:\n",
+    "        tet = text.count(number)\n",
+    "        number_freq_pairs.append([number, tet])\n",
+    "    return number_freq_pairs \n",
+    "print( count_numbers_freq )\n",
+    "def quick_sort(seq):\n",
+    "    left_seq =  []\n",
+    "    right_seq = []\n",
+    "    n=seq[0]\n",
+    "    for number in seq[1:]:\n",
+    "        if number <= n:\n",
+    "            left_seq.append(number)\n",
+    "        else:\n",
+    "            right_seq.append(number)\n",
+    "    if left_seq:\n",
+    "        left_seq = quick_sort(left_seq)\n",
+    "    if right_seq:\n",
+    "        right_seq = quick_sort(right_seq)\n",
+    "\n",
+    "    return  left_seq + [n] + right_seq\n",
+    "\n",
+    "print(numbers)\n",
+    "\n",
+    "            \n",
+    "\n",
+    "    \n",
+    "        \n",
+    "    \n",
+    "    \n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "#对本任务中的语料.txt文件，抽取其5001-10000行存为test1.txt文件，写函数，可得到其与本任务中test.txt文件的共用字以及独用字（相关概念自行百度）。\n",
+    "with open(r'd:\\test1.txt', 'w') as fw, open(r'd:\\test.txt') as fr:\n",
+    "    line_number = 5001\n",
+    "    for line in fr:\n",
+    "        if line_number<=10000:\n",
+    "            fw.write(line)\n",
+    "            line_number += 1\n",
+    "        else:\n",
+    "            break\n",
+    "    A=test.txt\n",
+    "    B=test1.txt\n",
+    "    print(A.union(B))\n",
+    "    print(A.intersection(B))\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'value' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "\u001b[1;32m<ipython-input-5-92a545ee1e69>\u001b[0m in \u001b[0;36m<module>\u001b[1;34m()\u001b[0m\n\u001b[0;32m     13\u001b[0m     \u001b[1;32mreturn\u001b[0m \u001b[0mkey_freq_pairs\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0;32m     14\u001b[0m \u001b[1;33m\u001b[0m\u001b[0m\n\u001b[1;32m---> 15\u001b[1;33m \u001b[0mkeys_freq\u001b[0m \u001b[1;33m=\u001b[0m \u001b[0mcount_keys_freq\u001b[0m\u001b[1;33m(\u001b[0m\u001b[0mdict\u001b[0m\u001b[1;33m,\u001b[0m\u001b[0mvalue\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0m\u001b[0;32m     16\u001b[0m \u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0;32m     17\u001b[0m \u001b[1;33m\u001b[0m\u001b[0m\n",
+      "\u001b[1;31mNameError\u001b[0m: name 'value' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "#挑战性任务：统计本任务中的语料.txt文件，得到每一个词对应不同词性的频次，可表示为：{词:[['n',1000], ['v', 98]...],...}，即在dict对象中，key为词，value为列表，输出词频最高的50个条目\n",
+    "def count_keys_freq(dict, value):\n",
+    "    key_freq_pairs = []\n",
+    "    value=[]\n",
+    "    with open() as f:\n",
+    "        text = f.read()\n",
+    "        i=0\n",
+    "    for key in keys:\n",
+    "        number = text.count(key)\n",
+    "        key_freq_pairs.append([key, number])\n",
+    "        while i>=50:\n",
+    "            i=i+1\n",
+    "    return key_freq_pairs\n",
+    "\n",
+    "keys_freq = count_keys_freq(dict,value)\n",
+    "\n",
+    "\n",
+    "print(keys_freq[:1000])\n",
+    "print(keys_freq[:98])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.2"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
